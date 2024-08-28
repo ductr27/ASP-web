@@ -1,0 +1,34 @@
+﻿﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Multiplication table</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <hr />
+    @{
+        var multiplicationTables = new Dictionary<int, List<string>>();
+
+        for (int i = 2; i <= 9; i++)
+        {
+            var results = new List<string>();
+            for (int j = 1; j <= 10; j++)
+            {
+                results.Add($"{i} x {j} = {i * j}");
+            }
+            multiplicationTables[i] = results;
+        }
+    }
+
+    @foreach (var table in multiplicationTables)
+    {
+        <div class="multiplication-table">
+            <h2>Multiplication table @table.Key</h2>
+            @foreach (var result in table.Value)
+            {
+                <p>@result</p>
+            }
+        </div>
+    }
+
+</div>
