@@ -1,0 +1,110 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <style>
+        body {
+            background-color: #f8d7da; /* Màu nền hồng nhạt */
+            color: #721c24; /* Màu chữ hồng đậm hơn */
+        }
+        .text-center {
+            text-align: center;
+        }
+        .display-4 {
+            font-size: 2.5rem;
+        }
+        header h2 {
+            color: #f5c6cb; /* Màu chữ hồng nhạt */
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        nav ul li {
+            margin: 10px 0;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #dee2e6;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f5c6cb; /* Màu nền hồng cho tiêu đề bảng */
+        }
+        footer {
+            background-color: #f5c6cb; /* Màu nền hồng cho chân trang */
+            padding: 10px;
+            text-align: center;
+        }
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="text-center">
+        <h1 class="display-4">Welcome ladies and gentlemen</h1>
+        <header>
+            <h2>Introduce ourselves: Single-member limited liability Company</h2>
+        </header>
+
+        <section>
+            <nav>
+                <ul>
+                    <li><a href="~/trang-chu">About me: The dude who loves cars and enjoys both rally racing and gymkhana</a></li>
+                    <li><a href="~/gioi-thieu-nhom">Group: Dodge Brothers</a></li>
+                </ul>
+            </nav>
+
+            <article>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>STT</th>
+                            <th>Student ID number</th>
+                            <th>Full name</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>1822041161</td>
+                            <td>Vu Trung Duc</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>1822041116</td>
+                            <td>Duc Trung Vu</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>1822041611</td>
+                            <td>Trung Vu Duc</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>1822046111</td>
+                            <td>Duc Trung Vu</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </article>
+        </section>
+
+        <footer>
+            <p>Copyright &copy; Dodge Brothers - SMLL Company - @DateTime.Now.Year</p>
+            <p>Website: <a href="https://www.dodgegarage.com/">Visit us</a>.</p>
+        </footer>
+    </div>
+</body>
+</html>
