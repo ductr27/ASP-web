@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\BT4.props" />
+</Project>
