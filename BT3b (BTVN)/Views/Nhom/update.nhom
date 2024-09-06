@@ -1,0 +1,53 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<header>
+    <h2>GIỚI THIỆU</h2>
+</header>
+
+<section>
+    <nav>
+        <ul>
+            <li><a href="~/Main">Dodger</a></li>
+            <li><a href="~/About group">Dodge brothers</a></li>
+        </ul>
+    </nav>
+
+    <article>
+       <table>
+           <thead>
+            <th>STT</th>
+            <th>Full name</th>
+            <th>Student ID </th>
+           </thead>
+           <tbody>
+            <tr>
+                <td>1</td>
+                <td>001</td>
+                <td>Vu Trung Duc</td>
+            </tr>
+                <tr>
+                    <td>1</td>
+                    <td>002</td>
+                    <td>Trung Duc Vu</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>003</td>
+                    <td>Duc Trung Vu</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>004</td>
+                    <td>Duc Vu Trung</td>
+                </tr>
+           </tbody>
+       </table>
+    </article>
+</section>
+
+<footer>
+    <p>Copyright &copy; Dodge Brothers - @DateTime.Now.Year</p>
+</footer>
