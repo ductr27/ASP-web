@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\BTVN-TH20.props" />
+</Project>
