@@ -4,29 +4,60 @@
 @{
 }
 
-<header>
-    <h2>Bài Tập</h2>
-</header>
 
-<section>
-    <nav>
-        <ul>
-            <li><a>@ViewBag.HoTen</a></li>
-            <li><a>@ViewBag.MSSV</a></li>
-        </ul>
-    </nav>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Tập</title>
+    <style>
+        .blinking {
+            color: blue;
+            animation: blink 1s step-start 0s infinite;
+        }
 
-    <article>
-        <table>
-            <tbody>
-                <tr><td class="blinking">Ngày sinh: 27-02-2004</td></tr>
-                <tr><td class="blinking">Sở thích: Đua xe F1, Rally và siêu xe</td></tr>
-                
-            </tbody>
-        </table>
-    </article>
-</section>
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
 
-<footer>
-    <p>Copyright &copy;@ViewBag.HoTen-@ViewData["Nam"]</p>
-</footer>
+        /* Đảm bảo các thẻ <li> trong <table> được định dạng chính xác */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        td {
+            padding: 8px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Bài Tập</h2>
+    </header>
+
+    <section>
+        <nav>
+            <ul>
+                <li><a>@ViewBag.HoTen</a></li>
+                <li><a>@ViewBag.MSSV</a></li>
+            </ul>
+        </nav>
+
+        <article>
+            <table>
+                <tbody>
+                    <tr><td class="blinking">Ngày sinh: 27-02-2004</td></tr>
+                    <tr><td class="blinking">Cung hoàng đạo: Song Ngư</td></tr>
+                    <tr><td class="blinking">Sở thích: Đua xe F1, Rally và siêu xe</td></tr>
+                </tbody>
+            </table>
+        </article>
+    </section>
+
+    <footer>
+        <p>Copyright &copy;@ViewBag.HoTen-@ViewData["Nam"]</p>
+    </footer>
+</body>
+</html>
