@@ -1,0 +1,10 @@
+﻿﻿@model LopHoc
+
+<div>
+	ID: <b>@Model.Id</b> <br />
+	Tên lớp: <b>@Model.Name</b> <br />
+	Ngày nhập hoc: <b>@String.Format("{00:dd/MM/yyyy}", Model.DateCreated)</b><br />
+	Ngày ra trường: <b>@String.Format("{00:dd/MM/yyyy}", Model.DateOut)</b><br />
+	Số lượng: <b>@Model.Soluong</b><br />
+
+</div>
