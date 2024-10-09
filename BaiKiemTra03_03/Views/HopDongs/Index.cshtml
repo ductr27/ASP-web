@@ -1,0 +1,53 @@
+﻿@model IEnumerable<BaiKiemTra03_03_x_.Models.HopDong>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ContracName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.SigningDate)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ContractValue)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.CustomerNavigation)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContracName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SigningDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ContractValue)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.CustomerNavigation.CustomerId)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ContracId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ContracId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ContracId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
